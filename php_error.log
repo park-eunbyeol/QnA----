@@ -1,0 +1,1 @@
+[31-Oct-2025 11:22:57 Asia/Seoul] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in /hosting/ghjrodf/html/QnA/config.php on line 2
