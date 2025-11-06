@@ -508,36 +508,23 @@ $day_of_week = date('w', $first_day);
             color: var(--text-dark);
         }
         
-        @media (max-width: 600px) {
-            .container {
-                padding: 20px;
-            }
-            
-            .calendar-header {
-                flex-direction: column;
-                gap: 16px;
-                align-items: flex-start;
-            }
-            
-            .month-nav {
-                width: 100%;
-            }
-            
-            .month-nav a {
-                flex: 1;
-                text-align: center;
-            }
-            
-            .date {
-                height: 80px;
-                padding: 8px;
-                font-size: 14px;
-            }
-            
-            .date-number {
-                font-size: 14px;
-            }
-        }
+        @media (max-width: 768px) {
+    body { padding: 10px; }
+    .header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .header h1 { font-size: 22px; }
+    .nav-links a { font-size: 13px; padding: 8px 14px; }
+    .post-form, .post { padding: 15px; }
+    .comment-form { flex-direction: column; }
+    .comment-form input[type="text"], .comment-form input[type="submit"] { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .header h1 { font-size: 20px; }
+    .post h2 { font-size: 18px; }
+    .nav-links { flex-direction: column; }
+    .nav-links a { width: 100%; text-align: center; }
+    .logout-btn { width: 100%; text-align: center; }
+}
     </style>
 </head>
 <body>
@@ -557,7 +544,7 @@ $day_of_week = date('w', $first_day);
         <a href="main.php">오늘의 질문</a>
         <a href="calendar.php" class="active">캘린더</a>
         <a href="insight.php">인사이트</a>
-        <a href="community.php" class="active">커뮤니티</a>
+        <a href="community.php">커뮤니티</a>
     </div>
     
     <div class="container">

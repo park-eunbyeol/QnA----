@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --primary: #5b7cfa;
             --primary-dark: #4c63dd;
@@ -93,11 +93,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             --card-dark: #252a48;
             --border-light: #e0e0e0;
             --border-dark: #3a3f5a;
-            --accent-blue: #5b7cfa;
             --success: #10b981;
             --error: #ef4444;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: var(--bg-light);
@@ -106,56 +105,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             padding: 20px;
             transition: background 0.3s, color 0.3s;
         }
-        
-        body.dark-mode {
-            background: var(--bg-dark);
-            color: var(--text-dark);
-        }
-        
+
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 40px;
+            margin: 0 auto 40px;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        h1 {
+
+        .header-left h1 {
             font-size: 28px;
             font-weight: 700;
-            color: var(--text-light);
         }
-        
-        body.dark-mode h1 {
-            color: var(--text-dark);
-        }
-        
-        .header-right {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        
-        .user-menu {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        
+
         .username {
             font-size: 14px;
-            font-weight: 500;
             opacity: 0.7;
         }
-        
+
         .logout-btn {
             text-decoration: none;
             color: white;
@@ -164,27 +134,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             border-radius: 10px;
             font-weight: 600;
             font-size: 14px;
-            transition: all 0.3s;
             border: none;
             cursor: pointer;
+            transition: 0.3s;
         }
-        
-        .logout-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(91, 124, 250, 0.3);
-        }
-        
+
         .nav-links {
             display: flex;
-            gap: 10px;
-            margin-bottom: 40px;
-            justify-content: center;
             flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 0 auto 40px;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
-        
+
         .nav-links a {
             padding: 12px 20px;
             background: var(--card-light);
@@ -194,72 +157,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 14px;
             font-weight: 600;
             border: 2px solid transparent;
-            transition: all 0.3s;
-            cursor: pointer;
+            transition: 0.3s;
         }
-        
-        body.dark-mode .nav-links a {
-            background: var(--card-dark);
-            color: var(--primary);
-        }
-        
-        .nav-links a:hover {
-            border-color: var(--primary);
-            background: var(--primary);
-            color: white;
-        }
-        
+
+        .nav-links a:hover,
         .nav-links a.active {
             background: var(--primary);
-            color: white;
+            color: #fff;
         }
-        
+
         .container {
             background: var(--card-light);
             padding: 40px;
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            transition: all 0.3s;
+            margin: 0 auto;
         }
-        
-        body.dark-mode .container {
-            background: var(--card-dark);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-        
+
         .date-info {
             color: var(--text-light);
             opacity: 0.6;
             font-size: 14px;
             margin-bottom: 24px;
-            font-weight: 500;
         }
-        
-        body.dark-mode .date-info {
-            color: var(--text-dark);
-        }
-        
+
         .question-box {
             background: linear-gradient(135deg, rgba(91, 124, 250, 0.08) 0%, rgba(102, 126, 234, 0.08) 100%);
             padding: 28px;
             border-radius: 14px;
             margin-bottom: 32px;
             border-left: 5px solid var(--primary);
-            transition: all 0.3s;
         }
-        
-        body.dark-mode .question-box {
-            background: linear-gradient(135deg, rgba(91, 124, 250, 0.15) 0%, rgba(102, 126, 234, 0.15) 100%);
-        }
-        
-        .question-box:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(91, 124, 250, 0.15);
-        }
-        
+
         .question-label {
             color: var(--primary);
             font-size: 12px;
@@ -268,34 +198,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .question-text {
-            color: var(--text-light);
             font-size: 22px;
             font-weight: 600;
             line-height: 1.7;
         }
-        
-        body.dark-mode .question-text {
-            color: var(--text-dark);
-        }
-        
-        .form-group {
-            margin-bottom: 24px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 12px;
-            color: var(--text-light);
-            font-weight: 600;
-            font-size: 15px;
-        }
-        
-        body.dark-mode label {
-            color: var(--text-dark);
-        }
-        
+
         textarea {
             width: 100%;
             padding: 16px;
@@ -305,30 +214,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 15px;
             resize: vertical;
             min-height: 160px;
-            background: var(--card-light);
-            color: var(--text-light);
-            transition: all 0.3s;
         }
-        
-        body.dark-mode textarea {
-            background: rgba(0, 0, 0, 0.2);
-            border-color: var(--border-dark);
-            color: var(--text-dark);
-        }
-        
-        textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(91, 124, 250, 0.1);
-        }
-        
+
         .button-group {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
         }
-        
+
         button {
+            flex: 1;
             padding: 14px 28px;
             background: linear-gradient(135deg, #5b7cfa 0%, #667eea 100%);
             color: white;
@@ -337,81 +232,112 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             font-size: 15px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s;
-            flex: 1;
-            min-width: 150px;
+            transition: 0.3s;
         }
-        
+
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(91, 124, 250, 0.3);
         }
-        
-        button:active {
-            transform: translateY(0);
-        }
-        
+
         .message {
             padding: 16px;
             margin-bottom: 24px;
             border-radius: 12px;
             font-size: 14px;
             font-weight: 600;
-            animation: slideDown 0.3s ease-out;
         }
-        
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
+
         .error {
             background: rgba(239, 68, 68, 0.1);
             color: #dc2626;
             border: 1px solid rgba(239, 68, 68, 0.3);
         }
-        
+
         .success {
             background: rgba(16, 185, 129, 0.1);
             color: #059669;
             border: 1px solid rgba(16, 185, 129, 0.3);
         }
-        
-        .saved-mark {
-            color: var(--success);
-            font-size: 13px;
-            margin-top: 8px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
+
+        /* ✅ 스마트폰 전용 반응형 */
         @media (max-width: 600px) {
+            body {
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                margin-bottom: 25px;
+            }
+
+            .header-left h1 {
+                font-size: 22px;
+            }
+
+            .logout-btn {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 8px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 8px;
+                margin-bottom: 25px;
+            }
+
+            .nav-links a {
+                width: 100%;
+                text-align: center;
+                padding: 12px;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+
             .container {
-                padding: 24px;
+                width: 100%;
+                padding: 20px;
+                border-radius: 12px;
+                box-shadow: none;
             }
-            
-            h1 {
-                font-size: 24px;
+
+            .question-box {
+                padding: 20px;
+                margin-bottom: 24px;
+                border-left-width: 4px;
             }
-            
+
             .question-text {
-                font-size: 18px;
+                font-size: 17px;
+                line-height: 1.6;
             }
-            
+
+            textarea {
+                font-size: 14px;
+                padding: 12px;
+                border-radius: 10px;
+                min-height: 130px;
+            }
+
             .button-group {
                 flex-direction: column;
+                gap: 10px;
             }
-            
+
             button {
-                min-width: auto;
+                width: 100%;
+                padding: 12px;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+
+            .message {
+                font-size: 13px;
+                padding: 12px;
             }
         }
     </style>
@@ -422,47 +348,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <h1>📖 Q&A 다이어리</h1>
         </div>
         <div class="header-right">
-            <div class="user-menu">
-                <span class="username"><?php echo htmlspecialchars($username); ?></span>
-                <a href="logout.php" class="logout-btn">로그아웃</a>
-            </div>
+            <span class="username"><?php echo htmlspecialchars($username); ?></span>
+            <a href="logout.php" class="logout-btn">로그아웃</a>
         </div>
     </div>
-    
+
     <div class="nav-links">
         <a href="main.php" class="active">오늘의 질문</a>
         <a href="calendar.php">캘린더</a>
         <a href="insight.php">인사이트</a>
-        <a href="community.php" class="active">커뮤니티</a>
+        <a href="community.php">커뮤니티</a>
     </div>
-    
+
     <div class="container">
         <?php echo $message; ?>
-        
+
         <div class="date-info">
             📅 <?php echo date('Y년 m월 d일 (l)', strtotime($today)); ?>
         </div>
-        
+
         <div class="question-box">
             <div class="question-label"><?php echo htmlspecialchars($question_data['category']); ?></div>
             <div class="question-text"><?php echo htmlspecialchars($question_data['question']); ?></div>
         </div>
-        
+
         <form method="POST" id="answerForm">
-            <div class="form-group">
-                <label for="answer">나의 답변</label>
-                <textarea id="answer" name="answer" placeholder="당신의 생각과 느낌을 자유롭게 적어보세요..." required><?php echo htmlspecialchars($today_answer['answer'] ?? ''); ?></textarea>
-                <?php if ($today_answer): ?>
-                    <div class="saved-mark">✓ 저장됨</div>
-                <?php endif; ?>
-            </div>
+            <label for="answer">나의 답변</label>
+            <textarea id="answer" name="answer" placeholder="당신의 생각을 자유롭게 적어보세요..." required><?php echo htmlspecialchars($today_answer['answer'] ?? ''); ?></textarea>
+
             <div class="button-group">
-                <button type="submit" name="save" value="1" onclick="setTimeout(function(){ document.getElementById('answer').value=''; }, 300);">💾 저장하기</button>
+                <button type="submit" name="save" value="1">💾 저장하기</button>
                 <button type="submit" name="delete" value="1" style="background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);" onclick="return confirm('정말 삭제하시겠습니까?');">🗑️ 삭제</button>
             </div>
         </form>
     </div>
-    
-
 </body>
 </html>
