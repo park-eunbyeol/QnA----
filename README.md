@@ -26,8 +26,6 @@ Q&A 게시판 구조를 응용하여,
 - **Database**: MySQL  
 - **Frontend**: HTML, CSS, JavaScript  
 - **Server**: Apache  
-- **Tools**: VS Code, Git
+- **Tools**: cursor, Git
 
 ---
-
-## 프로젝트 구조
