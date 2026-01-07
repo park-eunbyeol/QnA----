@@ -27,6 +27,7 @@ Q&A 게시판 구조를 응용하여,
 - **Frontend**: HTML, CSS, JavaScript  
 - **Server**: Apache  
 - **Tools**: cursor, Git
+---
 
   ## 구현 방식
 - PHP를 활용한 서버 사이드 로직 구현
@@ -40,3 +41,7 @@ Q&A 게시판 구조를 응용하여,
 
 
 ---
+## 개발 형태
+- 개인 프로젝트
+## 개발 형태
+- 개인 프로젝트
